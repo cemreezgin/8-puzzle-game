@@ -9,7 +9,7 @@ This project is a C implementation of various graph search algorithms designed t
 - Uniform Cost Search (UCS)  
 - Greedy Search  
 - A* Search  
-- Generalized A* Search (with α weighting)
+- Generalized A* Search 
 
 The solver visually prints each puzzle state and displays the complete solution path, showing applied actions, path cost, and number of nodes generated/searched. It is suitable for educational use, experimentation with search algorithms, or understanding heuristic design.
 
