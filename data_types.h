@@ -2,14 +2,13 @@
 #define DATA_TYPES_H
 
 
-// ==================== WRITE YOUR OPTIONAL DATA TYPES IF YOU NEED =============
+
 #define PUZZLE_DIMENSION 3
 #define PUZZLE_SIZE      (PUZZLE_DIMENSION * PUZZLE_DIMENSION)  // 9
 #define BLANK_TILE       0
 
-// ====== WRITE YOUR COMPULSORY (BUT SPECIFIC TO THE PROBLEM) DATA TYPES =======
 
-enum ACTIONS // All possible actions
+enum ACTIONS 
 {
 	Move_Up,
     Move_Down,
@@ -24,12 +23,12 @@ typedef struct State {
     int tiles[PUZZLE_SIZE];
     int blank_pos;
     float h_n;
-    unsigned int hash;  // Yeni eklenen hash değeri
+    unsigned int hash;  
 } State;
 
-// Fonksiyon bildirimi
+
 void Compute_State_Hash(State *state);
-// ================== YOU DO NOT NEED TO CHANGE THIS PART ======================
+
 
 enum METHODS
 {
@@ -38,7 +37,7 @@ enum METHODS
     AStarSearch = 7, GeneralizedAStarSearch = 8  
 };
 
-// This struct is used to determine a new state and action in transition model
+
 typedef struct Transition_Model
 {
     State new_state;
@@ -49,12 +48,12 @@ typedef struct Node
 {
     State state;
     float path_cost;
-    enum ACTIONS action; //The action applied to the parent to generate this node
+    enum ACTIONS action; 
     struct Node *parent;
-    int Number_of_Child; // required for depth-first search algorithms
+    int Number_of_Child; 
 }Node;
 
-typedef struct Queue  // Used for frontier
+typedef struct Queue  
 {
     Node *node;
     struct Queue *next;
