@@ -1,9 +1,4 @@
-//
-//  makefile.h
-//  iai_3
-//
-//  Created by Anıl on 10.05.2025.
-//
+
 
 CC = gcc
 CFLAGS = -O3 -march=native -flto -DNDEBUG
@@ -29,6 +24,6 @@ CFLAGS = -O3 -march=native -flto -fomit-frame-pointer -DNDEBUG
 
 #ifdef DEBUG
 void Print_Frontier(Queue *const frontier) {
-    // ... mevcut kod ...
+    
 }
 #endif
